@@ -2,14 +2,27 @@ package com.redbus.app.Bus;
 
 import java.time.LocalTime;
 
+import jakarta.persistence.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Busses")
 public class Bus {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	long busId;
+	
 	String travelsName;
 	int totalNoOfSeats;
 	boolean isAC;
 	boolean isSleeper;
-	String source, destionation;
-	LocalTime startTime, reachTime;
+	String source, destination;
+	String startTime, reachTime;
 	boolean isBusAvailable;
 	int seatsLeft;
 	int fare;
@@ -39,7 +52,7 @@ public class Bus {
 	}
 	public void setAC(boolean isAC) {
 		this.isAC = isAC;
-	}
+	} 
 	public boolean isSleeper() {
 		return isSleeper;
 	}
@@ -52,22 +65,22 @@ public class Bus {
 	public void setSource(String source) {
 		this.source = source;
 	}
-	public String getDestionation() {
-		return destionation;
+	public String getDestination() {
+		return destination;
 	}
-	public void setDestionation(String destionation) {
-		this.destionation = destionation;
+	public void setDestination(String destionation) {
+		this.destination = destionation;
 	}
-	public LocalTime getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(LocalTime startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
-	public LocalTime getReachTime() {
+	public String getReachTime() {
 		return reachTime;
 	}
-	public void setReachTime(LocalTime reachTime) {
+	public void setReachTime(String reachTime) {
 		this.reachTime = reachTime;
 	}
 	public boolean isBusAvailable() {

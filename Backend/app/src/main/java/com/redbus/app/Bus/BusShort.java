@@ -1,19 +1,49 @@
 package com.redbus.app.Bus;
 
 
-import java.time.LocalTime;
+	
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Primary;
+import jakarta.persistence.Id;
 
+import jakarta.annotation.Generated;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+@Entity
+@Table(name = "Busses")
 public class BusShort {
+	
+	@Id
 	long busId;
 	String travelsName;
 	int seatsLeft;
+	@Column(name = "isac")
 	boolean isAc;
-	LocalTime startTime, endTime;
+	String startTime, reachTime;
 	int fare;
 	String source, destination;
 	boolean isSleeper;
 	
 	
+	
+	
+	public BusShort(long busId, String travelsName, int seatsLeft, boolean isAc, String startTime, String reachTime,
+			int fare, String source, String destination, boolean isSleeper) {
+		super();
+		this.busId = busId;
+		this.travelsName = travelsName;
+		this.seatsLeft = seatsLeft;
+		this.isAc = isAc;
+		this.startTime = startTime;
+		this.reachTime = reachTime;
+		this.fare = fare;
+		this.source = source;
+		this.destination = destination;
+		this.isSleeper = isSleeper;
+	}
 	public long getBusId() {
 		return busId;
 	}
@@ -38,17 +68,17 @@ public class BusShort {
 	public void setAc(boolean isAc) {
 		this.isAc = isAc;
 	}
-	public LocalTime getStartTime() {
+	public String getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(LocalTime startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
-	public LocalTime getEndTime() {
-		return endTime;
+	public String getreachTime() {
+		return reachTime;
 	}
-	public void setEndTime(LocalTime endTime) {
-		this.endTime = endTime;
+	public void setreachTime(String reachTime) {
+		this.reachTime = reachTime;
 	}
 	public int getFare() {
 		return fare;

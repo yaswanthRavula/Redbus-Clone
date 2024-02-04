@@ -26,4 +26,12 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
 	@Transactional
 	void makeBusUnAvailable(@Param("busId") long busId);
 	
+	@Query(nativeQuery = true, value = "update busses set seats_left=?2 where bus_id = ?1 ")
+	@Modifying
+	@Transactional
+	void updateSeatsLeftBybusId(long busId, int seatsLeft);
+	
+	@Query(nativeQuery = true, value = "select seats_left from busses where bus_id = ?1")
+	int getSeatsLeftByBusId(long busId);
+	
 }

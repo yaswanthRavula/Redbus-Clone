@@ -13,6 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
 
   <dependencies>
 	  <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
@@ -78,4 +79,16 @@
 
 
   </dependencies>
+  <build>
+	  <plugins>
+    <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+            <mainClass>sample.maven.App</mainClass>
+            <layout>JAR</layout>
+        </configuration>
+    </plugin>
+</plugins>
+  </build>
 </project>

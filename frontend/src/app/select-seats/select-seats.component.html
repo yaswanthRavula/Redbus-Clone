@@ -1,0 +1,90 @@
+<div>
+    <div class="bus-details">
+        <p>Sri Balaji Travels</p>
+        <p>Supler Luxury Sleeper AC</p>
+    </div>
+    <p>Bus Seats Information : </p>
+    <div class="container2">
+        <div class="seats-icon-desc" *ngIf="busType == 'sleeper'">
+            <span><app-sleeper-view [purpose]="'demo'" [seatType]="'maleBooked'"></app-sleeper-view> - Booked</span>
+            <span><app-sleeper-view [purpose]="'demo'" [seatType]="'femaleBooked'"></app-sleeper-view> - Booked by Female</span>
+            <span><app-sleeper-view [purpose]="'demo'" [seatType]="'availableForFemale'" ></app-sleeper-view> - Available for only Women</span>
+            <span><app-sleeper-view [purpose]="'demo'" [seatType]="'availableForMale'"></app-sleeper-view> - Available</span>
+            
+        </div>
+        <div class="seats-icon-desc" *ngIf="busType == 'sitting'">
+            <span><app-sitting-view [purpose]="'demo'" [seatType]="'maleBooked'"></app-sitting-view> - Booked</span>
+            <span><app-sitting-view [purpose]="'demo'" [seatType]="'femaleBooked'"></app-sitting-view> - Booked by Female</span>
+            <span><app-sitting-view [purpose]="'demo'" [seatType]="'availableForFemale'" ></app-sitting-view> - Available for only Women</span>
+            <span><app-sitting-view [purpose]="'demo'" [seatType]="'availableForMale'"></app-sitting-view> - Available</span>
+            
+        </div>
+    
+        <div class="seats-list-outer-container">
+            <img src="/assets/steering.svg" class="drive">
+
+            <!-----------------------------Sleeper Layout--------------------------------->
+            <div class="seats-list-container" *ngIf="busType == 'sleeper'">
+                <div class="row">
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'"  [seatType]="'maleBooked'"></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'availableForFemale'"></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'femaleBooked'"></app-sleeper-view>
+                </div>
+                <div class="row">
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'"  [seatType]="'availableForMale'"></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'availableForFemale'"></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sleeper-view>
+                    <app-sleeper-view [purpose]="'real'" [seatType]="'femaleBooked'"></app-sleeper-view>
+                </div>
+            </div>
+
+
+            <!--------------------------Sitting Layout------------------------------------->
+            <div class="seats-list-container" *ngIf="busType== 'sitting'">
+                <div class="row sitting1">
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'maleBooked'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'maleBooked'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForFemale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"></app-sitting-view>
+                </div>
+                <div class="row sitting2">
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'maleBooked'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForFemale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"></app-sitting-view>
+                </div>
+                <div class="row sitting1">
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'maleBooked'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForFemale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"></app-sitting-view>
+                </div>
+                <div class="row sitting2">
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'maleBooked'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"  ></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'"  [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForFemale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'availableForMale'"></app-sitting-view>
+                    <app-sitting-view [purpose]="'real'" [seatType]="'femaleBooked'"></app-sitting-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

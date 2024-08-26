@@ -1,0 +1,24 @@
+<div class="container">
+   <div class="">
+    Filter:
+
+    <div class="chips-container">
+      <div class="inner-chip-container" *ngFor="let item of filtersArray">
+         <app-filter-chip-design [title]="item.title" ></app-filter-chip-design>
+      </div>
+    </div>
+    
+   </div>
+
+   <div class="busses-list-container">
+      <p class="">List of Busses</p>
+      <div class="bus-list">
+         <div class="bus" >
+            <app-bus-short-view (click)="goToSeatSelection()"></app-bus-short-view>
+            <app-bus-short-view></app-bus-short-view><app-bus-short-view></app-bus-short-view><app-bus-short-view></app-bus-short-view>
+         </div>
+      </div>
+   </div>
+
+   
+</div>

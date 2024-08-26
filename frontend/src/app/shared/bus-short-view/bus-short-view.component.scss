@@ -1,0 +1,64 @@
+.container{
+    width: 80% !important;
+    font-size: 18px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.inner-container{
+    background: white;
+    border: 1px solid rgba(128, 128, 128, 0.222);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+    padding: 1%;
+}
+table{
+    width: 99%;
+    justify-content: center;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td{
+    width: 50%;
+    padding: 1%;
+}
+.start-end-container{
+    display: flex;
+    align-items: center;
+}
+.start-end-container p{
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+.bus-type-text{
+    font-size: 13px;
+    margin-top : 0;
+}
+.line{
+    width:20px;
+    height: 1px;
+    background: rgb(38, 37, 37);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.start-time-text{
+    font-weight: bold;
+}
+
+.seats-available-container , .fare-container{
+    text-align: right;
+   // background: black;
+}
+.travels-name-text{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.total-time{
+    font-size: 12px;
+    margin: 0;
+}
+
+.fare-text , .seats-available-text{
+    margin-right: 4%;
+}

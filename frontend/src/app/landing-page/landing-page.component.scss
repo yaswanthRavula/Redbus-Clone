@@ -1,0 +1,34 @@
+
+
+.container{
+    background: rgba(0, 0, 255, 0.775);
+    color: white;
+    height: 100%;
+    padding: 100px;
+    
+}
+.Details-container{
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
+}
+h1{
+    text-align: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+.submit{
+    text-align: center;
+}
+.submit button{
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+    background: wheat;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 10px rgba(128, 128, 128, 0.163);
+
+}

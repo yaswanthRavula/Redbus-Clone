@@ -1,0 +1,36 @@
+.container{
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    margin: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+}
+.demo{
+    width: 20px;
+    height: 20px;
+}
+
+.femaleBooked{
+    background: rgba(241, 65, 109, 0.750);
+    border: 1px solid rgba(241, 65, 109, 0.750);
+}
+.maleBooked{
+    background: rgba(8, 0, 2, 0.357);
+    border: 1px solid rgba(8, 0, 2, 0.357);
+}
+
+.availableForFemale{
+    background: white;
+    border: 1px solid rgba(241, 65, 109, 0.750);
+}
+
+.availableForMale{
+    background: white;
+    border: 1px solid rgba(8, 0, 2, 0.357);
+}
+
+
+//  rgba(8, 0, 2, 0.357) ----grey
+// rgba(241, 65, 109, 0.750) ---pink

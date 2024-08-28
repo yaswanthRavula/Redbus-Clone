@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk-Spec: 17
-Specification-Title: maven
-Specification-Version: 0.0
-Implementation-Title: maven
-Implementation-Version: 0.0.1-SNAPSHOT
-Main-Class: sample.maven.App
-Created-By: Maven Integration for Eclipse
-

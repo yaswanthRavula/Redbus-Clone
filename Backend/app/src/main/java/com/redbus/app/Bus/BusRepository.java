@@ -34,16 +34,16 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
 	@Query(nativeQuery = true, value = "select seats_left from busses where bus_id = ?1")
 	int getSeatsLeftByBusId(long busId);
 	
-	@Query(nativeQuery = true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = true")
+	@Query(nativeQuery = true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = 1")
 	List<Bus> getBusesBetweenSrcandDest(String source, String destination); 
 	
-	@Query(nativeQuery= true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = true and isac= ?3")
+	@Query(nativeQuery= true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = 1 and isac= ?3")
 	List<Bus> filterBussesByOnlyAc(String source, String destination, boolean isAc);
 	
-	@Query(nativeQuery= true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = true and is_sleeper=?3")
+	@Query(nativeQuery= true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = 1 and is_sleeper=?3")
 	List<Bus> filterBussesByOnlySleeper(String source, String destination, boolean isSleeper);
 	
-	@Query(nativeQuery= true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = true and isac=?3 and is_sleeper=?4")
+	@Query(nativeQuery= true, value= "select * from busses where lower(source) = ?1 and lower(destination) = ?2 and is_bus_available = 1 and isac=?3 and is_sleeper=?4")
 	List<Bus> filterBussesByAcandSleeper(String source, String destination, boolean isAC, boolean isSleeper);
 	
 }

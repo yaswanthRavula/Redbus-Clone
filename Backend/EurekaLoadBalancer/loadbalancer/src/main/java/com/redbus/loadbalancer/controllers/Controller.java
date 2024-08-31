@@ -15,7 +15,7 @@ public class Controller {
 	
 	@GetMapping("/test")
 	public String testEndPoint() {
-		String reString = "http://myService/seats/API-LB-instance";
+		String reString = "https://myService/seats/API-LB-instance";
 		return restTemplate.getForEntity(reString, String.class).getBody();
 	}
 	
